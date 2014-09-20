@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -15,8 +15,63 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-tn-BQq">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="NjZ-Ru-grh"/>
+                                    <constraint firstAttribute="width" constant="320" id="p8g-Be-YGE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFH-wC-5cH">
+                                <rect key="frame" x="38" y="65" width="135" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="xAO-TH-tnC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1l-b7-I6B">
+                                <rect key="frame" x="38" y="474" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="画像選択">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performChooseImageButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lFU-sF-N17"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAf-FM-VIQ">
+                                <rect key="frame" x="211" y="474" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performStartButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="42P-bw-clc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Zb-tn-BQq" firstAttribute="top" secondItem="sFH-wC-5cH" secondAttribute="bottom" constant="35" id="9sz-z7-q3A"/>
+                            <constraint firstItem="sAf-FM-VIQ" firstAttribute="top" secondItem="0Zb-tn-BQq" secondAttribute="bottom" constant="60" id="ByB-Ja-VYN"/>
+                            <constraint firstItem="sAf-FM-VIQ" firstAttribute="top" secondItem="0Zb-tn-BQq" secondAttribute="bottom" constant="30" id="PE8-Qc-gVc"/>
+                            <constraint firstAttribute="centerY" secondItem="0Zb-tn-BQq" secondAttribute="centerY" id="eji-yz-p5b"/>
+                            <constraint firstItem="J1l-b7-I6B" firstAttribute="top" secondItem="0Zb-tn-BQq" secondAttribute="bottom" constant="60" id="nUE-DG-F1H"/>
+                            <constraint firstItem="J1l-b7-I6B" firstAttribute="top" secondItem="0Zb-tn-BQq" secondAttribute="bottom" constant="30" id="sDx-KE-WF9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseImageButton" destination="J1l-b7-I6B" id="5u5-In-sI7"/>
+                        <outlet property="mainView" destination="0Zb-tn-BQq" id="8Nk-WD-nhx"/>
+                        <outlet property="startButton" destination="sAf-FM-VIQ" id="1ka-5k-CxA"/>
+                        <outlet property="timeLabel" destination="sFH-wC-5cH" id="sqP-5v-e0T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

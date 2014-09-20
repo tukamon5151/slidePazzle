@@ -21,6 +21,7 @@
 		CBD74CA019A5E15300D01B7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD74C8219A5E15300D01B7C /* UIKit.framework */; };
 		CBD74CA819A5E15300D01B7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBD74CA619A5E15300D01B7C /* InfoPlist.strings */; };
 		CBD74CAA19A5E15300D01B7C /* SlidePazzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD74CA919A5E15300D01B7C /* SlidePazzleTests.m */; };
+		CBD74CB519A60A9F00D01B7C /* UIImage+Cropping.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD74CB419A60A9F00D01B7C /* UIImage+Cropping.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CBD74CA519A5E15300D01B7C /* SlidePazzleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlidePazzleTests-Info.plist"; sourceTree = "<group>"; };
 		CBD74CA719A5E15300D01B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBD74CA919A5E15300D01B7C /* SlidePazzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidePazzleTests.m; sourceTree = "<group>"; };
+		CBD74CB319A60A9F00D01B7C /* UIImage+Cropping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cropping.h"; sourceTree = "<group>"; };
+		CBD74CB419A60A9F00D01B7C /* UIImage+Cropping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cropping.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		CBD74C7219A5E15300D01B7C = {
 			isa = PBXGroup;
 			children = (
+				CBD74CB319A60A9F00D01B7C /* UIImage+Cropping.h */,
+				CBD74CB419A60A9F00D01B7C /* UIImage+Cropping.m */,
 				CBD74C8419A5E15300D01B7C /* SlidePazzle */,
 				CBD74CA319A5E15300D01B7C /* SlidePazzleTests */,
 				CBD74C7D19A5E15300D01B7C /* Frameworks */,
@@ -252,6 +257,7 @@
 				CBD74C9519A5E15300D01B7C /* ViewController.m in Sources */,
 				CBD74C8F19A5E15300D01B7C /* AppDelegate.m in Sources */,
 				CBD74C8B19A5E15300D01B7C /* main.m in Sources */,
+				CBD74CB519A60A9F00D01B7C /* UIImage+Cropping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +462,7 @@
 				CBD74CAF19A5E15300D01B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBD74CB019A5E15300D01B7C /* Build configuration list for PBXNativeTarget "SlidePazzleTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				CBD74CB219A5E15300D01B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
